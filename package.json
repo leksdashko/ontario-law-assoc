@@ -18,6 +18,7 @@
 		"gulp-postcss": "^9.0.1"
 	},
 	"devDependencies": {
+		"autoprefixer": "^10.4.13",
 		"browser-sync": "latest",
 		"del": "latest",
 		"gulp": "latest",
@@ -43,6 +44,7 @@
 		"gulp-webp-html-nosvg": "latest",
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
+		"postcss-nesting": "^11.1.0",
 		"sass": "latest",
 		"swiper": "latest",
 		"tailwindcss": "^3.2.6",

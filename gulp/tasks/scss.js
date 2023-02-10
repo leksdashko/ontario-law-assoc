@@ -49,9 +49,10 @@ export const scss = () => {
 				)
 			)
 		)
+		.pipe(postcss([tailwindcss("./tailwind.config.cjs")]))
+		
 		// Раскомментировать если нужен не сжатый дубль файла стилей
 		.pipe(app.gulp.dest(app.path.build.css))
-		.pipe(postcss([tailwindcss("./tailwind.config.cjs")]))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
