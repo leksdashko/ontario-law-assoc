@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "fonts";
+
+body {
+	font-family: DarkerGrotesque;
+	font-size: 22px;
+	font-weight: 500;
+	span {
+		color: red;
+	}
+}
