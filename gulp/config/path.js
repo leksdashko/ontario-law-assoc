@@ -18,6 +18,7 @@ export const path = {
 		js: `${srcFolder}/js/app.js`,
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
 		svg: `${srcFolder}/img/**/*.svg`,
+		scssDir: `${srcFolder}/scss`,
 		scss: `${srcFolder}/scss/style.scss`,
 		html: `${srcFolder}/*.html`, //.pug
 		files: `${srcFolder}/files/**/*.*`,
@@ -30,6 +31,7 @@ export const path = {
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
 		files: `${srcFolder}/files/**/*.*`
 	},
+	tailwindjs: './tailwind.config.cjs',
 	clean: buildFolder,
 	buildFolder: buildFolder,
 	srcFolder: srcFolder,

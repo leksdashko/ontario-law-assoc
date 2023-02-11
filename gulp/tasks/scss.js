@@ -1,9 +1,7 @@
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
-import tailwindcss from 'tailwindcss';
 
-import postcss from 'gulp-postcss';
 import cleanCss from 'gulp-clean-css'; // Сжатие CSS файла
 import webpcss from 'gulp-webpcss'; // Вывод WEBP изображений
 import autoprefixer from 'gulp-autoprefixer'; // Добавление вендорных префиксов
@@ -49,8 +47,8 @@ export const scss = () => {
 				)
 			)
 		)
-		.pipe(postcss([tailwindcss("./tailwind.config.cjs")]))
-		
+		.pipe(app.plugins.postcss([app.plugins.tailwindcss(app.path.tailwindjs)]))
+
 		// Раскомментировать если нужен не сжатый дубль файла стилей
 		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(
