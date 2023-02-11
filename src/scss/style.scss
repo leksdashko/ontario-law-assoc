@@ -8,13 +8,15 @@ body {
 	font-family: DarkerGrotesque;
 	font-size: 22px;
 	font-weight: 500;
-	span {
-		color: red;
-	}
 }
 .container{
 	max-width: 1157px;
 }
 a{
 	transition: all 0.3s;
+}
+.purple-back{
+	background-image: url(../img/purple-back.png);
+	background-repeat: no-repeat;
+	background-position: right -220px center;
 }
