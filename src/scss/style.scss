@@ -26,8 +26,44 @@ a{
 	background-position: 0 0;
 	background-size: cover;
 }
+.page-title-wr.page-title-dark{
+	position: relative;
+}
+.page-title-wr.page-title-dark > *{
+	position: relative;
+	z-index: 1;
+}
+.page-title-wr.page-title-dark::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	opacity: 0.8;
+	z-index: 0;
+}
 .feature-item{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
+}
+.page-description-wr{
+	background-image: url(../img/description-image.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+}
+.page-description-wr::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 82%);
+	opacity: 0.8;
+	z-index: 0;
 }
