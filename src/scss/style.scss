@@ -67,3 +67,16 @@ a{
 	opacity: 0.8;
 	z-index: 0;
 }
+.details-list li{
+	position: relative;
+}
+.details-list li::before{
+	content: '';
+	position: absolute;
+	left: -30px;
+	top: 6px;
+	border-radius: 20px;
+	width: 17px;
+	height: 17px;
+	background-color: #FA207A;
+}
