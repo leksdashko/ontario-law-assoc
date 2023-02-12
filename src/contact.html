@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	@@include('html/head.html',{
+	"title":"Home"
+	})
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	</head>
+	
+	<body class="bg-body">
+		@@include('html/header.html',{})
+		<main>
+			<div class="page-title-wr page-title-dark  text-center py-20">
+				<h2 class="text-white text-7xl leading-[54px]">Contact us</h2>
+			</div>
+
+			@@include('html/contact-us-wt.html',{})
+
+			<div class="container mx-auto bg-white rounded-xl pt-8 pb-12 mb-40">
+				<div class="text-center mt-5 mb-5">
+					<h4 class="text-dark text-lg mb-5">Get in Touch</h4>
+					<p class="font-normal text-base md:w-1/2 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor solor ut dolore magna</p>
+				</div>
+				
+				<div class="px-16">
+					<form action="#">
+						<div class="mt-16 grid grid-cols-4 gap-6 mb-5">
+							<div class="col-span-2">
+								<label class="inline-block text-base text-dark font-bold mb-5">Your name</label>
+								<input type="text" class="border border-[#ccc] rounded-lg w-full p-3 outline-none">
+							</div>
+							<div class="col-span-2">
+								<label class="inline-block text-base text-dark font-bold mb-5">Your email address</label>
+								<input type="email" class="border border-[#ccc] rounded-lg w-full p-3 outline-none">
+							</div>
+						</div>
+						<div>
+							<label class="inline-block text-base text-dark font-bold mb-5">Select Law service</label>
+							<nav class="hidden w-full space-x-10 md:flex border border-[#ccc] rounded-lg">
+								<div class="relative w-full rounded-lg" x-data="{ open: false }">
+									<button @click="open = ! open" type="button" class="text-gray-500 rounded-lg group p-4 w-full flex items-center justify-between bg-white text-base font-normal hover:text-gray-900" aria-expanded="false">
+										<span>Select service</span>
+										<img src="img/icon-polygon.svg" :class="{'rotate-180 duration-300': open, 'duration-300' : !open}">
+									</button>
+					
+									<div 
+											x-show="open" 
+											x-transition:enter="transition ease-out duration-200"
+											x-transition:enter-start="opacity-0 scale-90"
+											x-transition:enter-end="opacity-100 scale-100"
+											x-transition:leave="transition ease-in duration-200"
+											x-transition:leave-start="opacity-100 scale-100"
+											x-transition:leave-end="opacity-0 scale-90"
+											class="absolute left-1/2 w-full z-full mt-3 -translate-x-1/2 transform px-2 sm:px-0">
+					
+											<div class="overflow-hidden border border-pink">
+											<div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+													<a href="#" class="block rounded-lg p-3 hover:bg-gray-50">
+														<p class="text-base font-medium text-gray-900">Lorem</p>
+														<p class="mt-1 text-sm text-gray-500">Lorem options.</p>
+													</a>
+					
+													<a href="#" class="block rounded-lg p-3 hover:bg-gray-50">
+														<p class="text-base font-medium text-gray-900">Lorem</p>
+														<p class="mt-1 text-sm text-gray-500">Lorem options.</p>
+													</a>
+
+													<a href="#" class="block rounded-lg p-3 hover:bg-gray-50">
+														<p class="text-base font-medium text-gray-900">Lorem</p>
+														<p class="mt-1 text-sm text-gray-500">Lorem options.</p>
+													</a>
+											</div>
+											</div>
+									</div>
+								</div>
+							</nav>
+						</div>
+						<div class="mt-5">
+							<label class="inline-block text-base text-dark font-bold mb-5">Select Law service</label>
+							<textarea cols="30" rows="5" class="border border-[#ccc] rounded-lg w-full p-3 outline-none"></textarea>
+						</div>
+						<div class="text-center mt-10">
+							<button type="submit" class="inline-block text-white text-base-lg rounded-2xl font-bold uppercase py-5 px-10 bg-pink hover:bg-pink-light text-white">Submit</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
