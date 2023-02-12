@@ -15,28 +15,102 @@
 			</div>
 
 			<div class="page-description-wr mt-10">
-				<div class="container mx-auto relative z-10">
-					<div class="w-3/4 pt-40 pb-60">
-						<h3 class="font-medium text-white text-lg leading-[56px]">Lorem ipsum dolor sit amet consectetur. Erat est purus aliquam placerat orci. Libero facilisis proin.</h3>
-						<p class="font-normal text-white text-base leading-8 mt-8">Lorem ipsum dolor sit amet consectetur. Erat est purus aliquam placerat orci. Libero facilisis proin. Lorem ipsum dolor sit amet consectetur. Erat est purus aliquam placerat orci. Libero facilisis proin.</p>
+				<img src="img/description-image.jpg" alt="Lorem">
+				<div class="container px-5 md:px-0 mx-auto relative z-10">
+					<div class="lg:w-3/4 py-5 lg:pt-40 lg:pb-60">
+						<h3 class="font-medium lg:text-white text-[26px] lg:text-lg lg:leading-[56px]">Lorem ipsum dolor sit amet consectetur. Erat est purus aliquam placerat orci. Libero facilisis proin.</h3>
+						<p class="font-normal lg:text-white text-base leading-8 mt-8">Lorem ipsum dolor sit amet consectetur. Erat est purus aliquam placerat orci. Libero facilisis proin. Lorem ipsum dolor sit amet consectetur. Erat est purus aliquam placerat orci. Libero facilisis proin.</p>
 					</div>
 				</div>
 			</div>
 
 			<div class="container mx-auto py-20">
-				<div class="text-center mb-20">
+				<div class="block-title-wr text-center mb-20">
 					<h1 class="text-lg leading-[54px]">Latest News</h1>
 					<p class="text-base font-normal mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>In urna, non nisl tincidunt ut elementum turpis.</p>
 				</div>
 
-				<div class="grid grid-cols-6 gap-6">
-					<div class="col-span-4">
-						<div class="bg-white">
-							<a href="#" class="block h-[465px] overflow-hidden">
+				<div class="lg:grid grid-cols-6 gap-6">
+					<div class="lg:order-last col-span-2 flex flex-col">
+						<div class="lg:order-last mt-7 p-7 lg:bg-[#F0F0F4]">
+							<p class="text-dark pb-5 font-semibold text-base-md border-b-2 border-[#f5217a4d]">Categories</p>
+
+							<ul>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Awards</a>
+								</li>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Contacts</a>
+								</li>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Associations</a>
+								</li>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Executive</a>
+								</li>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Team</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="p-7 lg:bg-[#F0F0F4]">
+							<nav class="w-full space-x-10 flex">
+								<div class="relative w-full" x-data="{ open: false }">
+									<button @click="open = ! open" type="button" class="text-gray-500 group p-4 w-full flex items-center justify-between rounded-md bg-white text-base font-medium hover:text-gray-900" aria-expanded="false">
+										<span><img src="img/icon-sort.svg" class="inline-block mr-5 font-normal">	Sort by</span>
+										<img src="img/icon-polygon.svg" :class="{'rotate-180 duration-300': open, 'duration-300' : !open}">
+									</button>
+					
+									<div 
+											x-show="open" 
+											x-transition:enter="transition ease-out duration-200"
+											x-transition:enter-start="opacity-0 scale-90"
+											x-transition:enter-end="opacity-100 scale-100"
+											x-transition:leave="transition ease-in duration-200"
+											x-transition:leave-start="opacity-100 scale-100"
+											x-transition:leave-end="opacity-0 scale-90"
+											class="absolute left-1/2 w-full z-full mt-3 -translate-x-1/2 transform px-2 sm:px-0">
+					
+											<div class="overflow-hidden border border-pink">
+											<div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+													<a href="#" class="block rounded-lg p-3 hover:bg-gray-50">
+														<p class="text-base font-medium text-gray-900">Lorem</p>
+														<p class="mt-1 text-sm text-gray-500">Lorem options.</p>
+													</a>
+					
+													<a href="#" class="block rounded-lg p-3 hover:bg-gray-50">
+														<p class="text-base font-medium text-gray-900">Lorem</p>
+														<p class="mt-1 text-sm text-gray-500">Lorem options.</p>
+													</a>
+
+													<a href="#" class="block rounded-lg p-3 hover:bg-gray-50">
+														<p class="text-base font-medium text-gray-900">Lorem</p>
+														<p class="mt-1 text-sm text-gray-500">Lorem options.</p>
+													</a>
+											</div>
+											</div>
+									</div>
+								</div>
+							</nav>
+						</div>
+
+						<div class="lg:bg-purple py-7 px-7 lg:px-5 lg:mt-7">
+							<form class="flex rounded-lg bg-white" action="#">
+								<input class="flex-auto py-4 px-4 outline-0 rounded-l-lg bg-transparent text-dark text-base font-normal placeholder:text-[#191B4C]" type="text" placeholder="Search">
+								<button class="w-30 px-3 m-1 text-base-lg rounded-lg font-bold uppercase bg-pink hover:bg-pink-light text-white transition duration-300">
+									<img src="img/icon-search.svg">
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="col-span-4 mt-10 lg:mt-0">
+						<div class="p-5 lg:p-0 bg-white">
+							<a href="#" class="block lg:h-[465px] overflow-hidden">
 								<img src="img/news-image.jpg" alt="Lorem" class="object-contain w-full">
 							</a>
 
-							<div class="px-8 py-6">
+							<div class="lg:px-8 py-6">
 								<h2 class="mb-4"><a href="#" class="text-dark font-semibold text-base-md hover:underline">Lorem ipsum dolor sit amet consectetur. Erat est purus aliquam placerat orci. Libero facilisis proin.</a></h2>
 								<p class="text-base font-normal mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
 								
@@ -66,107 +140,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-span-2">
-						<div class="p-7 bg-[#F0F0F4]">
-							<nav class="hidden w-full space-x-10 md:flex">
-								<div class="relative w-full" x-data="{ open: false }">
-									<button @click="open = ! open" type="button" class="text-gray-500 group p-4 w-full flex items-center justify-between rounded-md bg-white text-base font-medium hover:text-gray-900" aria-expanded="false">
-										<span><img src="img/icon-sort.svg" class="inline-block mr-5 font-normal">	Sort by</span>
-										<img src="img/icon-polygon.svg" :class="{'rotate-180 duration-300': open, 'duration-300' : !open}">
-									</button>
-					
-									<div 
-											x-show="open" 
-											x-transition:enter="transition ease-out duration-200"
-											x-transition:enter-start="opacity-0 scale-90"
-											x-transition:enter-end="opacity-100 scale-100"
-											x-transition:leave="transition ease-in duration-200"
-											x-transition:leave-start="opacity-100 scale-100"
-											x-transition:leave-end="opacity-0 scale-90"
-											class="absolute left-1/2 w-full z-full mt-3 -translate-x-1/2 transform px-2 sm:px-0">
-					
-											<div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-											<div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-													<a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-													
-													<svg class="h-6 w-6 flex-shrink-0 text-template-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-															<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
-													</svg>
-													
-													<div class="ml-4">
-															<p class="text-base font-medium text-gray-900">Enterprise</p>
-															<p class="mt-1 text-sm text-gray-500">Enterprise options.</p>
-													</div>
-													</a>
-					
-													<a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-													<svg class="h-6 w-6 flex-shrink-0 text-template-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-															<path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9" />
-													</svg>
-													<div class="ml-4">
-															<p class="text-base font-medium text-gray-900">Books</p>
-															<p class="mt-1 text-sm text-gray-500">All books</p>
-													</div>
-													</a>
-					
-													<a href="#" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
-													<svg class="h-6 w-6 flex-shrink-0 text-template-secondary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-															<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-													</svg>
-													
-													<div class="ml-4">
-															<p class="text-base font-medium text-gray-900">Users</p>
-															<p class="mt-1 text-sm text-gray-500">All Users</p>
-													</div>
-													</a>
-											</div>
-											</div>
-									</div>
-								</div>
-							</nav>
-						</div>
-
-						<div class="bg-purple py-7 px-5 mt-7">
-							<form class="flex rounded-lg bg-white" action="#">
-								<input class="flex-auto py-4 px-4 outline-0 rounded-l-lg bg-transparent text-dark text-base font-normal placeholder:text-[#191B4C]" type="text" placeholder="Search">
-								<button class="w-30 px-3 m-1 text-base-lg rounded-lg font-bold uppercase bg-pink hover:bg-pink-light text-white transition duration-300">
-									<img src="img/icon-search.svg">
-								</button>
-							</form>
-						</div>
-
-						<div class="mt-7 p-7 bg-[#F0F0F4]">
-							<p class="text-dark pb-5 font-semibold text-base-md border-b-2 border-[#f5217a4d]">Categories</p>
-
-							<ul>
-								<li>
-									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Awards</a>
-								</li>
-								<li>
-									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Contacts</a>
-								</li>
-								<li>
-									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Associations</a>
-								</li>
-								<li>
-									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Executive</a>
-								</li>
-								<li>
-									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Team</a>
-								</li>
-							</ul>
-						</div>
-					</div>
 				</div>
 
-				<div class="grid grid-cols-2 gap-8 mt-12">
+				<div class="md:grid grid-cols-2 gap-8 mt-12">
 					<div class="col-span-1">
-						<div class="bg-white">
-							<a href="#" class="block h-[310px] overflow-hidden">
+						<div class="bg-white p-5 md:p-0 mb-7 md:mb-0">
+							<a href="#" class="block lg:h-[310px] overflow-hidden">
 								<img src="img/news-image.jpg" alt="Lorem" class="object-contain w-full">
 							</a>
 
-							<div class="px-8 py-6">
+							<div class="md:px-8 py-6">
 								<div class="mb-2"><a href="#" class="text-pink font-medium text-sm hover:underline">Lorem Ipsum Dolor</a></div>
 								<h2 class="mb-3"><a href="#" class="text-dark font-semibold text-base-md hover:underline">Lorem ipsum dolor sit.</a></h2>
 								<p class="text-base font-normal mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
@@ -179,7 +162,7 @@
 					</div>
 
 					<div class="col-span-1">
-						<div class="bg-white">
+						<div class="bg-white mb-7 md:mb-0">
 							<div class="px-8 py-6">
 								<h2 class="mb-4 text-dark font-semibold text-base-md leading-10">Lorem ipsum dolor sit amet consectetur. Erat est purus aliquam placerat orci. Libero facilisis proin.</h2>
 								<p class="text-base font-normal mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut </p>
@@ -201,7 +184,7 @@
 					</div>
 
 					<div class="col-span-1">
-						<div class="bg-white">
+						<div class="bg-white mb-7 md:mb-0">
 							<div class="px-8 py-6">
 								<h2 class="mb-4 text-dark font-semibold text-base-md leading-10">Lorem ipsum dolor sit amet consectetur. Erat est purus aliquam placerat orci. Libero facilisis proin.</h2>
 								<p class="text-base font-normal mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut </p>
@@ -223,12 +206,12 @@
 					</div>
 
 					<div class="col-span-1">
-						<div class="bg-white">
-							<a href="#" class="block h-[310px] overflow-hidden">
+						<div class="bg-white p-5 md:p-0 mb-7 md:mb-0">
+							<a href="#" class="block lg:h-[310px] overflow-hidden">
 								<img src="img/news-image.jpg" alt="Lorem" class="object-contain w-full">
 							</a>
 
-							<div class="px-8 py-6">
+							<div class="md:px-8 py-6">
 								<div class="mb-2"><a href="#" class="text-pink font-medium text-sm hover:underline">Lorem Ipsum Dolor</a></div>
 								<h2 class="mb-3"><a href="#" class="text-dark font-semibold text-base-md hover:underline">Lorem ipsum dolor sit.</a></h2>
 								<p class="text-base font-normal mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
@@ -241,12 +224,12 @@
 					</div>
 
 					<div class="col-span-1">
-						<div class="bg-white">
-							<a href="#" class="block h-[310px] overflow-hidden">
+						<div class="bg-white p-5 md:p-0 mb-7 md:mb-0">
+							<a href="#" class="block lg:h-[310px] overflow-hidden">
 								<img src="img/news-image.jpg" alt="Lorem" class="object-contain w-full">
 							</a>
 
-							<div class="px-8 py-6">
+							<div class="md:px-8 py-6">
 								<div class="mb-2"><a href="#" class="text-pink font-medium text-sm hover:underline">Lorem Ipsum Dolor</a></div>
 								<h2 class="mb-3"><a href="#" class="text-dark font-semibold text-base-md hover:underline">Lorem ipsum dolor sit.</a></h2>
 								<p class="text-base font-normal mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
@@ -259,12 +242,12 @@
 					</div>
 
 					<div class="col-span-1">
-						<div class="bg-white">
-							<a href="#" class="block h-[310px] overflow-hidden">
+						<div class="bg-white p-5 md:p-0 mb-7 md:mb-0">
+							<a href="#" class="block lg:h-[310px] overflow-hidden">
 								<img src="img/news-image.jpg" alt="Lorem" class="object-contain w-full">
 							</a>
 
-							<div class="px-8 py-6">
+							<div class="md:px-8 py-6">
 								<div class="mb-2"><a href="#" class="text-pink font-medium text-sm hover:underline">Lorem Ipsum Dolor</a></div>
 								<h2 class="mb-3"><a href="#" class="text-dark font-semibold text-base-md hover:underline">Lorem ipsum dolor sit.</a></h2>
 								<p class="text-base font-normal mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
@@ -281,15 +264,15 @@
 					<a href="#" class="inline-block text-white text-base-lg rounded-2xl font-bold uppercase py-5 px-8 bg-pink hover:bg-pink-light text-white">Load more</a>
 				</div>
 
-				<div class="text-center my-20">
+				<div class="block-title-wr text-center my-20">
 					<h1 class="text-lg leading-[54px]">Upcoming Events</h1>
 					<p class="text-base font-normal mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>In urna, non nisl tincidunt ut elementum turpis.</p>
 				</div>
 
-				<div class="grid grid-cols-2 gap-8 mt-12">
+				<div class="md:grid grid-cols-2 gap-8 mt-12 px-5 md:mx-0">
 					<div class="col-span-1">
-						<div class="bg-white">
-							<a href="#" class="block h-[310px] overflow-hidden">
+						<div class="bg-white mb-7 md:mb-0">
+							<a href="#" class="block lg:h-[310px] overflow-hidden">
 								<img src="img/news-image.jpg" alt="Lorem" class="object-contain w-full">
 							</a>
 
@@ -304,8 +287,8 @@
 					</div>
 					
 					<div class="col-span-1">
-						<div class="bg-white">
-							<a href="#" class="block h-[310px] overflow-hidden">
+						<div class="bg-white mb-7 md:mb-0">
+							<a href="#" class="block lg:h-[310px] overflow-hidden">
 								<img src="img/news-image.jpg" alt="Lorem" class="object-contain w-full">
 							</a>
 
@@ -320,8 +303,8 @@
 					</div>
 					
 					<div class="col-span-1">
-						<div class="bg-white">
-							<a href="#" class="block h-[310px] overflow-hidden">
+						<div class="bg-white mb-7 md:mb-0">
+							<a href="#" class="block lg:h-[310px] overflow-hidden">
 								<img src="img/news-image.jpg" alt="Lorem" class="object-contain w-full">
 							</a>
 
@@ -336,8 +319,8 @@
 					</div>
 					
 					<div class="col-span-1">
-						<div class="bg-white">
-							<a href="#" class="block h-[310px] overflow-hidden">
+						<div class="bg-white mb-7 md:mb-0">
+							<a href="#" class="block lg:h-[310px] overflow-hidden">
 								<img src="img/news-image.jpg" alt="Lorem" class="object-contain w-full">
 							</a>
 
