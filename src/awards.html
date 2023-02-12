@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		@@include('html/head.html',{
+			"title":"Awards"
+		})
+		<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	</head>
+
+	<body class="bg-body">
+		@@include('html/header.html',{})
+		<main>
+			<div class="page-title-wr page-title-dark  text-center py-20">
+				<h2 class="text-white text-7xl leading-[54px]">Awards</h2>
+			</div>
+
+			<div class="container mx-auto py-14">
+				<h2 class="text-lg leading-[54px]">Awards</h2>
+				<div class="flex justify-between">
+					<div class="w-2/5">
+						<p class="text-base font-normal mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>In urna, non nisl tincidunt ut elementum turpis.</p>
+					</div>
+					<div>
+						<a href="#" class="inline-block text-base-lg rounded-2xl mr-5 font-bold uppercase py-5 px-16 border border-pink text-dark">2019</a>
+						<a href="#" class="inline-block text-base-lg rounded-2xl mr-5 font-bold uppercase py-5 px-16 border border-pink text-dark">2020</a>
+						<a href="#" class="inline-block text-white text-base-lg rounded-2xl font-bold uppercase py-5 px-16 bg-pink hover:bg-pink-light text-white">More</a>
+					</div>
+				</div>
+				
+				<div class="grid grid-cols-6 gap-6 mt-16">
+					<div class="col-span-4">
+						<div class="grid grid-cols-5 gap-4 mb-12">
+							<div class="col-span-1">
+								<div class="bg-[#3A58E9] px-3 py-5">
+									<div class="h-[65px]">
+										<img src="img/award-1.svg" class="mb-3">
+									</div>
+									<span class="text-base-md text-white font-bold">96+</span>
+									<p class="text-base text-white font-normal">Awards<br/>wins</p>
+								</div>
+							</div>
+							<div class="col-span-1">
+								<div class="bg-[#3A58E9] px-3 py-5">
+									<div class="h-[65px]">
+										<img src="img/award-2.svg" class="mb-3">
+									</div>
+									<span class="text-base-md text-white font-bold">5,300</span>
+									<p class="text-base text-white font-normal">Awards<br/>wins</p>
+								</div>
+							</div>
+							<div class="col-span-1">
+								<div class="bg-[#3A58E9] px-3 py-5">
+									<div class="h-[65px]">
+										<img src="img/award-3.svg" class="mb-3">
+									</div>
+									<span class="text-base-md text-white font-bold">300</span>
+									<p class="text-base text-white font-normal">Awards<br/>wins</p>
+								</div>
+							</div>
+							<div class="col-span-1">
+								<div class="bg-[#3A58E9] px-3 py-5">
+									<div class="h-[65px]">
+										<img src="img/award-4.svg" class="mb-3">
+									</div>
+									<span class="text-base-md text-white font-bold">5,300</span>
+									<p class="text-base text-white font-normal">Awards<br/>wins</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="py-6">
+							<h2 class="mb-4 text-dark font-semibold text-base-md">Awards</h2>
+							<p class="text-base font-normal mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+						</div>
+					</div>
+					<div class="col-span-2">
+
+						<div class="bg-[#F0F0F4] py-7 px-5">
+							<form class="flex rounded-lg bg-white" action="#">
+								<input class="flex-auto py-4 px-4 outline-0 rounded-l-lg bg-transparent text-dark text-base font-normal placeholder:text-[#191B4C]" type="text" placeholder="Search">
+								<button class="w-30 px-3 m-1 text-base-lg rounded-lg font-bold uppercase bg-pink hover:bg-pink-light text-white transition duration-300">
+									<img src="img/icon-search.svg">
+								</button>
+							</form>
+						</div>
+
+						<div class="mt-7 p-7 bg-[#F0F0F4]">
+							<p class="text-dark pb-5 font-semibold text-base-md border-b-2 border-[#f5217a4d]">About</p>
+
+							<ul>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Awards</a>
+								</li>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Contacts</a>
+								</li>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Associations</a>
+								</li>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Executive</a>
+								</li>
+								<li>
+									<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Team</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			@@include('html/contact-us.html',{})
+		</main>
+		@@include('html/footer.html',{})
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
