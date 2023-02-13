@@ -16,15 +16,15 @@
 
 			@@include('html/contact-us-wt.html',{})
 
-			<div class="container mx-auto bg-white rounded-xl pt-8 pb-12 mb-40">
+			<div class="container mx-auto bg-white rounded-xl px-5 pt-8 pb-12 mb-40">
 				<div class="text-center mt-5 mb-5">
 					<h4 class="text-dark text-lg mb-5">Get in Touch</h4>
 					<p class="font-normal text-base md:w-1/2 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor solor ut dolore magna</p>
 				</div>
 				
-				<div class="px-16">
+				<div class="px-0 md:px-16">
 					<form action="#">
-						<div class="mt-16 grid grid-cols-4 gap-6 mb-5">
+						<div class="mt-16 md:grid grid-cols-4 gap-6 mb-5">
 							<div class="col-span-2">
 								<label class="inline-block text-base text-dark font-bold mb-5">Your name</label>
 								<input type="text" class="border border-[#ccc] rounded-lg w-full p-3 outline-none">
@@ -36,7 +36,7 @@
 						</div>
 						<div>
 							<label class="inline-block text-base text-dark font-bold mb-5">Select Law service</label>
-							<nav class="hidden w-full space-x-10 md:flex border border-[#ccc] rounded-lg">
+							<nav class="w-full space-x-10 flex border border-[#ccc] rounded-lg">
 								<div class="relative w-full rounded-lg" x-data="{ open: false }">
 									<button @click="open = ! open" type="button" class="text-gray-500 rounded-lg group p-4 w-full flex items-center justify-between bg-white text-base font-normal hover:text-gray-900" aria-expanded="false">
 										<span>Select service</span>
