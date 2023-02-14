@@ -2,8 +2,10 @@ export function init() {
 	const menuBtn = document.getElementById('mobile-mbtn');
 
 	if(menuBtn){
+		const mobileMenu = document.querySelector('.top-menu');
+		const closeBtn = mobileMenu.querySelector('.close-btn');
+
 		menuBtn.addEventListener('click', function(){
-			const mobileMenu = document.querySelector('.top-menu');
 			const isActive = mobileMenu.classList.contains('show');
 			
 			if(isActive){
@@ -11,6 +13,10 @@ export function init() {
 			}else{
 				mobileMenu.classList.add('show');
 			}
+		});
+
+		closeBtn.addEventListener('click', function(){
+			mobileMenu.classList.remove('show');
 		});
 	}
 }
