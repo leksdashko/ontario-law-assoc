@@ -32,8 +32,11 @@
 
 				<div class="lg:grid grid-cols-6 gap-6">
 					<div class="lg:order-last col-span-2 flex flex-col">
-						<div class="lg:order-last mt-7 p-7 lg:bg-[#F0F0F4]">
-							<p class="text-dark pb-5 font-semibold text-base-md border-b-2 border-[#f5217a4d]">Categories</p>
+						<div class="mobile-toggle-list toggle-menu lg:order-last mt-7 p-7 lg:bg-[#F0F0F4]">
+							<button class="flex items-center justify-between lg:block w-full text-start text-dark pb-5 font-semibold text-base-md border-b-2 border-[#f5217a4d]">
+								<span>Categories</span>
+								<span class="polygon inline-block lg:hidden"></span>
+							</button>
 
 							<ul>
 								<li>
@@ -53,13 +56,31 @@
 								</li>
 							</ul>
 						</div>
+						
+						<div class="flex justify-end p-7 lg:bg-[#F0F0F4]">
+							<div class="toggle-list toggle-menu w-2/3 lg:w-full">
+								<button class="flex items-center justify-between w-full text-start text-dark pb-5 font-semibold text-base-md border-b-2 border-[#f5217a4d]">
+									<div class="flex items-center"><span class="sort-icon mr-3"></span> Sort by</div>
+									<span class="polygon"></span>
+								</button>
+	
+								<ul>
+									<li>
+										<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">First</a>
+									</li>
+									<li>
+										<a href="#" class="block text-base font-normal bg-white py-4 px-4 rounded-lg mt-4 hover:bg-[#fff7f7] hover:text-dark">Second</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 
-						<div class="p-7 lg:bg-[#F0F0F4]">
+						<!-- <div class="">
 							<nav class="w-full space-x-10 flex">
 								<div class="relative w-full" x-data="{ open: false }">
 									<button @click="open = ! open" type="button" class="text-gray-500 group p-4 w-full flex items-center justify-between rounded-md bg-white text-base font-medium hover:text-gray-900" aria-expanded="false">
 										<span><img src="img/icon-sort.svg" class="inline-block mr-5 font-normal">	Sort by</span>
-										<img src="img/icon-polygon.svg" :class="{'rotate-180 duration-300': open, 'duration-300' : !open}">
+										<span class="polygon" :class="{'rotate-180 duration-300': open, 'duration-300' : !open}"></span>
 									</button>
 					
 									<div 
@@ -93,7 +114,7 @@
 									</div>
 								</div>
 							</nav>
-						</div>
+						</div> -->
 
 						<div class="lg:bg-purple py-7 px-7 lg:px-5 lg:mt-7">
 							<form class="flex rounded-lg bg-white" action="#">
